@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM
+    </title>
+    <style>
+        div#area {
+            font: 1em Verdana, Arial;   
+            display: flex;
+            background: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area"> <!-- Comandos inline: onmousedown="clicar()" onmouseup="soltar()" onmouseenter="entrar()" onmouseout="sair()" -->
+        Interaja
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('mousedown', clicar)
+        a.addEventListener('mouseup', soltar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = '#09ff00'
+        }
+        function soltar() {
+            a.innerText = 'Entrou'
+            a.style.background = 'rgb(42, 139, 42)'
+        }
+        function entrar() {
+            a.innerText = 'Entrou'
+        }
+        function sair() {
+            a.innerText = 'Saiu'
+        }
+    </script>
+</body>
+</html>
