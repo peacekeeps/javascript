@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horas do dia</title>
     <style>
+        root {
+            --daycolor1: #7593ff;
+            --daycolor2: #354ea8;
+            
+            --nightcolor1: rgb(45, 45, 156);
+            --nightcolor2: #000000;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -20,13 +28,14 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            background: rgb(107, 139, 253);
+            /* background: rgb(107, 139, 253); */
             font: 1em Arial;
         }
 
         header {
             color: white;
             text-align: center;
+            padding: 20px;
         }
 
         section {
@@ -41,8 +50,16 @@
             box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.522);
         }
 
+        span.mono {
+            font-family: monospace;
+            font-size: 1.3em;
+            font-weight: bolder;
+            letter-spacing: 3px;
+        }
+
         div#mensagem {
             padding: 25px 0;
+            text-align: center;
         }
 
         div#imagem2 {
@@ -61,7 +78,15 @@
         }
 
         footer {
+            display: block;
+            width: 100%;
+            padding: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-family: monospace;
+            font-size: 1.2em;
             margin-top: auto;
+            background-color: white;
         }
 
     </style>
