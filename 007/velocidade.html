@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de velocidade</title>
+</head>
+<body>
+    <h1>Teste de velocidade</h1>
+    <p>Exemplo 1: Em uma via, a velocidade máxima é 80km/h.</p>
+    <label for="velocidade">Em qual velocidade você está trafegando?</label>
+    <input type="number" name="velocidade" id="velocidade"> km/h
+    <input type="button" value="Realizar o teste" onclick="testeVelocidade()">
+    <div id="resultado"></div>
+    
+    <script>
+        function testeVelocidade() {
+            var velocidade = Number(document.getElementById('velocidade').value);
+
+            var resultado = document.getElementById('resultado')
+
+            resultado.innerHTML = `<p>Sua velocidade é de <strong>${velocidade}km/h</strong></p>`
+
+            if (velocidade >= 80) {
+                resultado.innerHTML += (`Você está acima do limite da via e portanto foi <strong>multado!</strong>`) //Precisa usar declaração de auto-atribuição nesse caso, porque queremos escrever dentro da div#resultado e estamos na verdade atribuindo valores à nossa variável
+            }
+
+            resultado.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+
+            
+        }
+    </script>
+</body>
+</html>
