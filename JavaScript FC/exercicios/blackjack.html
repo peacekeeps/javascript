@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            height: 100vh;
+            margin: 0;
+            background-image: radial-gradient(rgb(32, 153, 32), rgb(2, 78, 2));
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        main {
+            color: white;
+            font-style: bold;
+            width: 600px;
+            margin: auto;
+        }
+
+        h1 {
+            margin: 100px auto;
+            font-size: 2.5em;
+            text-align: center;
+            color: goldenrod
+        }
+
+        p {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .left {
+            text-align: left;
+        }
+
+        input {
+            display: block;
+            width: 150px;
+            height: 50px;
+            margin: auto;
+
+            font-size: 1em;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>BlackJack</h1>
+        <p id="message-el">Do you want to play a round?</p>
+
+        <input type="button" value="Start Game" id="button-el" onclick="startGame()">
+        <div class="button-container">
+            <input type="button" class="hidden" value="Yes" id="yes-button">
+            <input type="button" class="hidden" value="No" id="no-button">
+        </div>
+
+        <p class="left" id="cards-el">Cards: </p>
+        <p class="left" id="result-el">Sum: </p>
+    </main>
+    <script src="blackjack.js"></script>
+</body>
+</html>
