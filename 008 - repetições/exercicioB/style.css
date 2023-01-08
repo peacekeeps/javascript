@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    height: 100vh;
+    background-color: rgb(123, 196, 255);
+    font-family: 'Verdana', sans-serif;
+    font-size: 1em;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    min-width: 300px;
+    max-width: 700px;
+    margin: auto;
+
+    padding: 20px;
+    background-color: #f3f3f3;
+    border: 1px solid black;
+    box-shadow: 3px 3px 1px black;
+}
+
+#ip_valor {
+    font-size: 1em;
+    padding: 5px;
+}
+
+#div_result {
+    width: 150px;   
+    margin-top: 20px;
+
+    padding: 10px;
+    font-size: .9em;
+    border: 1px solid black;
+    overflow: hidden;
+}

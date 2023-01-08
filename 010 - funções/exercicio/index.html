@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Analisador de Números</title>
+</head>
+<body>
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <label for="ip_value">Digite um número de 1 à 100: </label> 
+                
+                <input type="number" name="ip_value" id="ip_value">
+
+                <input type="button" value="Adicionar" onclick="newValue()">
+            </div>
+
+            <select name="sel_value" id="sel_value" size="10"></select>
+
+            <input type="button" value="Analisar" onclick="checkValue()" id="analisar">
+
+            <div id="result"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

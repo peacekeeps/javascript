@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Verificador de Idade</title>
+  </head>
+  <body>
+    <header>
+      <h1>Verificador de Idade</h1>
+    </header>
+    <main>
+        <fieldset>
+          <div class="div_fieldset-container div_ano-nasc">
+            <label for="ip_ano-nasc" class="form-id">Ano de Nascimento: </label>
+            <input type="number" name="ip_ano-nasc" id="ip_ano-nasc" min="1900" max="2022" placeholder="2022"/>
+          </div>
+
+          <div class="div_sex">
+            <p class="form-id">Sexo: </p>
+
+            
+            <label for="ip_sex" class="label_sex"><input type="radio" name="ip_sex" id="ip_sex-masc" checked /> Masculino</label>
+
+            
+            <label for="ip_sex" class="label_sex"><input type="radio" name="ip_sex" id="ip_sex-fem" /> Feminino</label>
+          </div>
+
+          <div id="div_resultado">
+            <p>Preencha os dados para ver o resultado!</p>
+          </div>
+
+          <input type="button" value="Verificar" id="ip_verificar" onclick="checkData()"/>
+        </fieldset>
+    </main>
+    <footer>Desenvolvido por Ex-Zos</footer>
+    <script src="script.js"></script>
+  </body>
+</html>

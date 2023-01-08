@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    background-color: rgb(82, 82, 250);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .8em;
+}
+
+header {
+    grid-area: header;
+    margin: 10px auto;
+    color: white;
+}
+
+main {
+    grid-area: main;
+    /* margin: auto */
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+.div_ano-nasc {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-id {
+    /* margin-top: 20px; */
+    margin-bottom: 10px;
+}
+
+input {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+#ip_ano-nasc {
+    width: 150px;
+    margin-left: 15px;
+    padding: 2px 5px;
+    font-size: 1em;
+    border-radius: 5px;
+    outline: none;
+}
+
+#ip_verificar {
+    align-self: center;
+    width: 150px;
+    padding: 5px;
+}
+
+.label_sex {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-left: 15px;
+}
+
+
+
+footer {
+    grid-area: footer;
+    margin: auto;
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: rgb(82, 82, 250);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    margin-bottom: 10px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    min-width: 300px;
+    max-width: 600px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+.div_ano-nasc {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-id {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+input {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+#ip_ano-nasc {
+    width: 150px;
+    margin-left: 15px;
+    padding: 2px 5px;
+    font-size: 1em;
+    border-radius: 5px;
+    outline: none;
+}
+
+#ip_verificar {
+    margin-top: auto;
+    align-self: center;
+    width: 150px;
+    padding: 5px;
+}
+
+.label_sex {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-left: 15px;
+}
+
+footer {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.2em;
+    margin-bottom: auto;
+    background-color: white;
+} */
