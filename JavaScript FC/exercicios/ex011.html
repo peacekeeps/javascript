@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyShelf</title>
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px auto;
+            width: 400px;
+            height: 50px;
+            border-radius: 5px;
+        }
+
+        #apple-el {
+            background-color: rgba(255, 0, 0, 0.496);
+        }
+
+        #orange-el  {
+            background-color: rgba(255, 166, 0, 0.498);
+        }
+    </style>
+</head>
+<body>
+    <div id="apple-el"></div>
+    <div id="orange-el"></div>
+<script>
+    let appleEl = document.getElementById("apple-el")
+    let orangeEl = document.getElementById("orange-el")
+    let orange = "&#x1F34A"
+    let apple = "&#x1F34E"
+    let fruits = [orange, orange, apple, apple, orange]
+
+    for (let i = 0; i < fruits.length; i ++) {
+        if (fruits[i] == apple) {
+            appleEl.innerHTML += apple
+        } else {
+            orangeEl.innerHTML += orange
+        }
+    }
+</script>
+</body>
+</html>
