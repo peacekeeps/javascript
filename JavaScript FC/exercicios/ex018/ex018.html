@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        #container {
+            display: flex;
+            width: 80%;
+            margin: auto;
+            justify-content: space-around;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Brooklyn Agency</h1>
+    <div id="container"></div>
+    <script>
+        const container = document.getElementById("container")
+        const img = [
+            "1.png",
+            "2.png",
+            "3.png"
+        ]
+
+        function render(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                let img = document.createElement("img")
+                img.src = arr[i]
+                container.append(img)
+            }
+        }
+
+        render(img)
+    </script>
+</body>
+</html>

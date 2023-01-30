@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            input[type=button] {
+                display: block;
+                margin: auto;
+                height: 40px;
+                width: 80px;
+                background-color: #f3f3f3;
+                border: 1px solid rgba(0, 0, 0, 0.457);
+                border-radius: 5px;
+
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 1em;
+            }
+
+            p#msg {
+                text-align: center;
+                font-size: 1em;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div-el"></div>
+        <script>
+            const divEl = document.getElementById("div-el")
+
+            divEl.innerHTML = `<input type="button" value="Buy!" id="input-btn">`
+
+            let inputBtn = document.getElementById("input-btn")
+
+            inputBtn.addEventListener("click", function() {{
+                divEl.innerHTML += "<p id='msg'>Thank you for buying!</p>"
+            }})
+        </script>
+    </body>
+</html>
