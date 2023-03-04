@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .high-container {
+            grid-area: 2 / 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            width: 200px;
+            height: 200px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 1em;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="high-container">
+            <h1>Counter</h1>
+            <h2 id="count-el">0</h2>
+            <div class="container">
+                <input type="button" value="Increase" class="btn add" id="add-btn">
+                <input type="button" value="Decrease" class="btn remove" id="remove-btn">
+                <input type="button" value="Reset" id="reset-btn" class="btn reset">
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
