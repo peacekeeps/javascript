@@ -11,3 +11,39 @@ I just told you! You've killed me! Fry! Quit doing the right thing, you jerk! Mi
   `Man braid celiac synth freegan readymade, pitchfork fam salvia waistcoat lomo bitters gentrify four loko. Pitchfork semiotics post-ironic vegan. Tofu meditation microdosing hashtag semiotics venmo. Flexitarian vape tilde taiyaki. Prism poutine farm-to-table, messenger bag vegan taxidermy tattooed sartorial squid jean shorts fixie selvage trust fund vape.`,
   `Rutters Plate Fleet boom chandler Brethren of the Coast handsomely lookout marooned brigantine knave. Buccaneer gangway jack rum loot spyglass line Jack Tar fore gaff. Gaff topmast scuttle ballast swab draught measured fer yer chains dance the hempen jig Chain Shot yardarm.`,
 ];
+
+const form = document.querySelector('.lorem-form')
+const amount = document.getElementById("amount")
+const result = document.querySelector(".lorem-text")
+
+form.addEventListener("submit", function(e) {
+  // formulários mandam seus dados para um server por padrão, então precisamos evitar esse comportamento:
+  e.preventDefault()
+  const value = Number(amount.value)
+  // gerando um paragrafo aleatório
+  const random = Math.floor(Math.random() * text.length) // lembrando que Math.random() gera um número de 0 até 0.999, quando multiplicado por 10, ele gera de 0 à 9. Como arrays são indexados em 0, a conta bate certinha.
+
+  // vamos criar algumas ações:
+  // caso nenhum número seja digitado
+  // números menores que 0
+  // números maiores que 9 (nosso array só tem 9 itens)
+
+  // para limpar o elemento
+  result.innerHTML = ""
+
+  // if(isNaN(value) || value < 0 || value > 9) {
+    if(value <= 0 || value > 9) {
+    result.innerHTML = `<p class="result">${text[random]}</p>`
+  } else {
+    for (i = 0; i < (value); i++) {
+      result.innerHTML += `<p class="result">${text[i]}</p>`
+      /*
+        // Método 2
+          let tempText = text.slice(0, value)
+          tempText = tempText.map(function(item) {
+            return `<p class="result">${item}</p>
+          }).join("")
+      */
+    }
+  }
+})
