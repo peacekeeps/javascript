@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>navbar</title>
+    <script
+      src="https://kit.fontawesome.com/e2edc3d57c.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #f2f2f2;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+
+      button {
+        font-family: "Roboto", sans-serif;
+        font-size: 1rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+      }
+
+      /*
+        ===============
+        Nav
+        ===============
+        */
+      @media screen and (min-width: 600px) {
+        .nav-box .links-box {
+          display: flex;
+          flex-direction: row;
+        }
+
+        .nav-box .social-box {
+          display: flex;
+          flex-direction: row;
+        }
+
+        .nav-box .menu-btn {
+          display: none;
+        }
+      }
+
+      .nav-box {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        height: 51px;
+        background-color: white;
+      }
+
+      h1 {
+        letter-spacing: 1.5px;
+        margin: 0.5rem;
+        align-self: center;
+        user-select: none;
+      }
+
+      .links-box {
+        display: none;
+      }
+
+      .links-box .show-menu {
+        display: block;
+      }
+
+      .links-box li {
+        margin: 1rem;
+      }
+
+      .link-btn {
+        transition: 0.3s;
+      }
+
+      .link-btn a:hover {
+        color: #717171;
+      }
+
+      .social-box {
+        display: none;
+      }
+
+      .social-btn {
+        margin: 0.5rem;
+        transition: 0.3s;
+      }
+
+      .social-btn:hover {
+        color: #717171;
+      }
+
+      .menu-btn {
+        align-self: center;
+        margin: 1rem;
+        font-size: 1.3rem;
+        transition: 0.3s;
+      }
+
+      .menu-btn:hover {
+        color: #717171;
+        transform: rotate(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="nav-box">
+        <h1>NavBar</h1>
+        <ul class="links-box">
+          <li><button class="link-btn"><a href="#">Home</a></button></li>
+          <li><button class="link-btn"><a href="#">About</a></button></li>
+          <li><button class="link-btn"><a href="#">Projects</a></button></li>
+          <li><button class="link-btn"><a href="#">Contact</a></button></li>
+        </ul>
+        <ul class="social-box">
+          <li>
+            <button class="social-btn">
+              <i class="fa-brands fa-facebook"></i>
+            </button>
+          </li>
+          <li>
+            <button class="social-btn">
+              <i class="fa-brands fa-twitter"></i>
+            </button>
+          </li>
+          <li>
+            <button class="social-btn">
+              <i class="fa-brands fa-linkedin"></i>
+            </button>
+          </li>
+        </ul>
+        <button class="menu-btn"><i class="fa-solid fa-bars"></i></button>
+      </nav>
+    </header>
+    <script src="app.js"></script>
+  </body>
+</html>

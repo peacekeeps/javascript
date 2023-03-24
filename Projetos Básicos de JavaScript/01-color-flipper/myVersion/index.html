@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper || Simple</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            text-transform: capitalize;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */
+        }
+
+        /* Header */
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: .5rem 1rem;
+            background-color: #f0f0f0;
+        }
+
+        header .title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            
+        }
+
+        header h1 {
+            display: inline;
+            font-family: "Open Sans", sans-serif;
+            font-size: 2rem;
+
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        header hr {
+            height: 20px;
+            /* align-self: center; */
+        }
+
+        header button {
+            margin: 0 2rem;
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.2rem;
+            font-weight: bolder;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: .3s;
+
+            
+        }
+
+        header button:hover {
+            letter-spacing: 3px;
+            color:hsl(201, 71%, 49%);
+        }
+
+        /* Color Element */
+        main {
+            display: grid;
+            height: calc(100vh - 52.59px);
+            place-items: center;
+        }
+
+        main .btn {
+            background-color: hsl(0, 0%, 12%);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.8rem;
+            color: white;
+            transition: .3s;
+        }
+
+        #color-txt {
+            letter-spacing: 1px;
+            color:hsl(201, 71%, 49%);
+
+            -webkit-user-select: auto; /* Safari */
+            -ms-user-select: text; /* IE 10 and IE 11 */
+            user-select: auto; /* Standard syntax */
+        }
+
+        span #color-txt.txt-hex {
+            letter-spacing: 3px;
+        }
+
+        main .btn:hover {
+            background-color: hsl(0, 0%, 24%);
+        }
+
+    </style>
+</head>
+<body>
+        <header class="header">
+            <section class="title">
+                <h1>Color Flipper</h1>
+                <hr>
+                <p id="identifier">simple generator</p>
+            </section>
+            <section class="btn-container">
+                <button class="btn hex-btn">HEX</button>
+            </section>
+        </header>
+
+        <main class="bg">
+            <button accesskey="g" class="btn color-btn">
+                <h2>Background Color : <span id="color-txt">white</span></h2>
+            </button>
+        </main>
+        <script src="app.js">
+
+        </script>
+</body>
+</html>

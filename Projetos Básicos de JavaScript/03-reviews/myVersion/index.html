@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <script src="https://kit.fontawesome.com/e2edc3d57c.js" crossorigin="anonymous"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+        :root {
+            --clr-blue: rgb(0, 132, 255);
+            --clr-black: #222;
+        }
+
+        *, *:before, *:after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;-moz-box-sizing: border-box;
+            box-sizing: border-box; 
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            color: var(--clr-black);
+
+            background-color: #f0f0f0;
+            /* margin: 0; */
+            transition: .3s;
+        }
+
+        button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        /*
+        ===============
+        Header
+        ===============
+        */
+        .title-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            margin: 1rem auto 2rem auto;
+        }
+
+        .title-box h1 {
+            font-family: "Open Sans", sans-serif;
+            font-size: 2rem;
+        }
+
+        .title-box hr {
+            width: 100px;
+            border: 1px solid var(--clr-blue);
+            animation: 1.5s 1 alternate linesize;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes linesize {
+            0% {
+                width: 400px
+            }
+            100% {
+                width: 100px;
+            }
+        }
+        /*
+        ===============
+        Main
+        ===============
+        */
+        main {
+            display: grid;
+        }
+        .content-box {
+            display: grid;
+            grid-template-rows: auto 40px 30px;
+            /* align-items: center; */
+
+            position: relative;
+            
+            place-self: center;
+
+            width: 500px;
+            height: 500px;
+            margin: auto auto 1rem auto;
+            padding: 1rem;
+
+            background-color: white;
+
+            text-align: center;
+
+            border: 1px solid rgba(0, 0, 0, 0.36);
+            border-radius: 10px;
+            box-shadow: 1px 1px 2px black;
+
+            animation: 1s 1 alternate showup;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes showup {
+            from {
+                margin-top: 3rem;
+                opacity: 0;
+            }
+            to {
+                margin-top: 0;
+                opacity: 1;
+            }
+        }
+
+        .content-box::before {
+            opacity: 0;
+            content: "";
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: 5%;
+            left: 37%;
+            background-color: var(--clr-blue);
+            clip-path: circle(at center);
+            animation: .5s 1 linear show-image forwards;
+            animation-delay: 1.5s;
+
+        }
+        
+        .user-box {
+            margin-top: 1rem;
+        }
+
+        .img-box {
+            width: 150px;
+            height: 150px;
+            margin: auto;
+            clip-path: circle(at center);
+        }
+
+        .img-box img {
+            opacity: 0;
+            width: 150px;
+            height: 150px;
+            color: black;
+            font-family: "Open Sans", sans-serif;
+            animation: .5s 1 linear show-image forwards;
+        }
+
+        .firstload {
+            animation-delay: 1.2s;
+        }
+
+        @keyframes show-image {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .text-box {
+            margin-bottom: 1rem;
+            padding: 1rem;
+        }
+
+        .text-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: .3rem;
+        }
+
+        .text-box h4 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .text-box p {
+            font-size: .9rem;
+        }
+
+        .arrow-box {
+            margin-bottom: .5rem;
+        }
+
+        .arrow-box button {
+            height: 32px;
+        }
+
+        .arrow-box .fa-solid {
+            margin: .5rem;
+            font-size: 1rem;
+            color: var(--clr-blue);
+            transition: .3s;
+        }
+
+        .arrow-box .fa-solid:hover {
+            color: rgb(101, 181, 255);
+        }
+
+        .surprise-box .surprise {
+            padding: .1rem .5rem;
+
+            background-color: rgb(188, 227, 253);
+
+            font-family: "Open Sans", sans-serif;
+            letter-spacing: 1.5px;
+            font-size: .9rem;
+            color: #222222;
+
+            border: 2px solid var(--clr-blue);
+            border-radius: 3px;
+            transition: .3s;
+        }
+
+        .surprise-box .surprise:hover {
+            background-color: rgb(101, 181, 255);
+        }
+
+        .overflow {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="overflow">
+    <header>
+        <section class="title-box">
+            <h1>Our Team</h1>
+            <hr>
+        </section>
+    </header>
+    <main>
+        <section class="content-box">
+            <div class="user-box">
+                <div class="img-box">
+                    <img src="imagens/person01.jpeg" alt="person's img" id="image-el" class="img-animation firstload">
+                </div>
+                <div class="text-box">
+                    <h3 id="name-el">Chiquita Bacana</h3>
+                    <h4 id="job-el">Especialista em Kung Fu</h4>
+                    <p id="description-el">Meu nome é Chiquita. Desde pequena eu luto Kung Fu, já matei 3 homens paraplégicos usando minhas habilidades, e claro, não foram todos de uma vez (risos). Gosto de ler rótulos de embalagens e comer arroz papa com mostarda.</p>
+                </div>
+            </div>
+            <div class="arrow-box">
+                <button class="previous btn"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="next btn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <div class="surprise-box">
+                <button class="surprise btn">Surprise Me</button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js">
+
+    </script>
+</body>
+</html>
