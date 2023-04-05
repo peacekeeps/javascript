@@ -232,10 +232,10 @@ Questions
   margin-bottom: 0;
 }
 /* hide text */
-.question-text {
+.question-text { /* É a caixa de texto contida na div .question */
   display: none;
 }
-.show-text .question-text {
+.show-text .question-text { /*quando .show-text estiver habilitado*/
   display: block;
 }
 .minus-icon {
