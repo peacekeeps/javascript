@@ -48,8 +48,26 @@
       @media screen and (min-width: 600px) {
         .nav-box .links-box {
           display: flex;
+          align-items: center;
+          justify-content: center;
           flex-direction: row;
+          position: initial;
+          /* top: 0; */
+          /* width: auto; */
+          height: auto;
+          background-color: white;
+          transition: .3s;
+          z-index: 1;
         }
+
+        .link-btn {
+        /* display: block; */
+        /* text-align: center; */
+        margin: 0;
+        padding: 1rem;
+        /* width: auto; */
+        transition: background-color .3s;
+      }
 
         .nav-box .social-box {
           display: flex;
@@ -72,28 +90,46 @@
 
       h1 {
         letter-spacing: 1.5px;
-        margin: 0.5rem;
+        margin: 1rem;
         align-self: center;
         user-select: none;
       }
 
       .links-box {
-        display: none;
-      }
-
-      .links-box .show-menu {
         display: block;
+        position: absolute;
+        top: 51px;
+        height: 0;
+        width: 100%;
+        background-color: white;
+        transition: 0.3s;
+        z-index: -1;
+        overflow: hidden;
       }
 
-      .links-box li {
-        margin: 1rem;
+      .nav-box .show-menu {
+        height: 204px;
+        transition: .3s;
       }
 
       .link-btn {
-        transition: 0.3s;
+        display: block;
+        text-align: left;
+        margin: 0;
+        padding: 1rem;
+        width: 100%;
+        transition: background-color .3s;
       }
 
-      .link-btn a:hover {
+      .show-menu .link-btn:hover {
+        background-color: #f0f0f0;
+      }
+
+      .link-btn {
+        transition: color 0.3s;
+      }
+
+      .link-btn:hover {
         color: #717171;
       }
 
@@ -128,10 +164,18 @@
       <nav class="nav-box">
         <h1>NavBar</h1>
         <ul class="links-box">
-          <li><button class="link-btn"><a href="#">Home</a></button></li>
-          <li><button class="link-btn"><a href="#">About</a></button></li>
-          <li><button class="link-btn"><a href="#">Projects</a></button></li>
-          <li><button class="link-btn"><a href="#">Contact</a></button></li>
+          <li>
+            <button class="link-btn"><a href="#">Home</a></button>
+          </li>
+          <li>
+            <button class="link-btn"><a href="#">About</a></button>
+          </li>
+          <li>
+            <button class="link-btn"><a href="#">Projects</a></button>
+          </li>
+          <li>
+            <button class="link-btn"><a href="#">Contact</a></button>
+          </li>
         </ul>
         <ul class="social-box">
           <li>

@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 2rem auto;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+.question-container {
+    margin: 1.5rem;
+    width: 80%;
+    max-width: 800px;
+}
+
+.question-box {
+    margin-bottom: 1rem;
+    padding: .5rem;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5rem;
+}
+
+hr {
+    margin: auto;
+    width: 80%;
+}
+
+.inner-body.hide {
+    display: none;
+}
+
+.body.hide {
+    height: 0;
+}
+
+.question-box hr {
+    margin-bottom: .5rem;
+}
+
+.show-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.show {
+    animation: .3s 1 linear show-effect forwards;
+}
+
+.close {
+    animation: .3s 1 linear close-effect forwards;
+}
+
+@keyframes close-effect {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes show-effect {
+    from {
+        transform: rotate(45deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
